@@ -11,7 +11,7 @@ Copy the full contents of the file into your functions.php file, or copy the fil
 	$defaults = array(
 		'container'   => false,
 		'menu_class'  => 'off-canvas-list',
-		'walker'      => new Foundation_Off_Canvas_Menu()
+		'walker'      => new FoundationNavWalker()
 	);
 
 	wp_nav_menu( $defaults );

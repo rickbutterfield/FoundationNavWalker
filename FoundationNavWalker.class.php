@@ -5,7 +5,7 @@
  * https://github.com/rickbutterfield/FoundationNavWalker
  */
 
-class Foundation_Off_Canvas_Menu extends Walker_Nav_Menu {
+class FoundationNavWalker extends Walker_Nav_Menu {
 
   public function start_lvl( &$output, $depth = 0, $args = array() ) {
     $indent = str_repeat( "\t", $depth);
