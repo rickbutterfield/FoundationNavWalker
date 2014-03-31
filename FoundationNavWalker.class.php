@@ -33,7 +33,7 @@ class FoundationNavWalker extends Walker_Nav_Menu {
     $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
     if ( $depth === 0 ) {
-      $output .= '<li' . $id . $value . $class_names . '><label>' . esc_attr( $item->title ) . '</label></li>';
+      $output .= '<li' . $id . $value . $class_names . '><label>' . esc_attr( $item->title ) . '</label>';
     }
 
     if ( $depth === 1) {
@@ -43,7 +43,6 @@ class FoundationNavWalker extends Walker_Nav_Menu {
         $output .= '<a href="' . $item->url . '">' . $item->title . '</a>';
       }
 
-      $output .= '</li>';
     }
   }
 
