@@ -33,7 +33,7 @@ class FoundationNavWalker extends Walker_Nav_Menu {
     $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
     if ( $depth === 0 ) {
-      $output .= '<li' . $id . $value . $class_names . '><label>' . esc_attr( $item->title ) . '</label>';
+      $output .= '<li' . $id . $value . $class_names . '><label>' . esc_attr( $item->title ) . '</label></li>';
     }
 
     if ( $depth === 1) {
@@ -50,6 +50,13 @@ class FoundationNavWalker extends Walker_Nav_Menu {
   public function end_lvl( &$output, $depth = 0, $args = array() ) {
     $indent = str_repeat( "\t", $depth);
     $output .= "\n$indent\n";
+  }
+  
+  //End li only if child level
+  public function end_el( &$output, $item, $depth = 0, $args = array() ) {
+    if ( $depth === 1) {
+      $output .= "</li>\n";
+    }
   }
 }
 
