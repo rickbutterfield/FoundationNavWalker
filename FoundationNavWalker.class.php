@@ -80,7 +80,7 @@ class FoundationNavWalker extends Walker_Nav_Menu {
         /** This filter is documented in wp-includes/post-template.php */
         $output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
         $output .= '</a>';
-        $$output .= $args->after;
+        $output .= $args->after;
       }
 
     }
